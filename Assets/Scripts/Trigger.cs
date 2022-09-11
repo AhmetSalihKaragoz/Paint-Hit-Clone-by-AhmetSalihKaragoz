@@ -16,7 +16,7 @@ public class Trigger : MonoBehaviour
         if (!other.GetComponent<CirclePiece>().isColored)
         {
             other.GetComponent<CirclePiece>().ballSpawner.SpawnBall();
-            //ColorManager.Instance.SetCirclePieceColor(other.gameObject);
+            ColorManager.Instance.SetCirclePieceColor(other.gameObject);
             ColorManager.Instance.ClearSplash();
             ColorManager.Instance.triggeredPieceList.Add(other.gameObject);
             other.GetComponent<CirclePiece>().isColored = true;
